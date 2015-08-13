@@ -20,7 +20,7 @@
 :  +..........................................+  :
 :                                                :
 :  +..........................................+  :
-:  :RootDevice:MSEEB.root                     :  :
+:  :Device:MSEEB.root                         :  :
 :  :                                          :  :
 :  :  +....................................+  :  :
 :  :  :Module<REF>:BooleanState            :  :  :
@@ -39,10 +39,10 @@
 :  :  +....................................+  :  :
 :  :                                          :  :
 :  :  +....................................+  :  :
-:  :  :Devices                             :  :  :
+:  :  :SubDevices                          :  :  :
 :  :  :                                    :  :  :
 :  :  :  +..............................+  :  :  :
-:  :  :  :Device:switch.power.1         :  :  :  :
+:  :  :  :SubDevice:switch.power.1      :  :  :  :
 :  :  :  :                              :  :  :  :
 :  :  :  :+...........................+ :  :  :  :
 :  :  :  ::Module<REF>:BooleanState   : :  :  :  :
@@ -50,7 +50,7 @@
 :  :  :  +..............................+  :  :  :
 :  :  :                                    :  :  :
 :  :  :  +..............................+  :  :  :
-:  :  :  :Device:switch.power.2         :  :  :  :
+:  :  :  :SubDevice:switch.power.2      :  :  :  :
 :  :  :  :                              :  :  :  :
 :  :  :  :+...........................+ :  :  :  :
 :  :  :  ::Module<REF>:BooleanState   : :  :  :  :
@@ -62,7 +62,7 @@
 
 -->
 <Domain xmlns:xi="http://www.w3.org/2001/XInclude"
-    xmlns="http://homegatewayinitiative.org/xml/dal/2.0" 
+    xmlns="http://homegatewayinitiative.org/xml/dal/3.0" 
     id="org.homegatewayinitiative">
 
 <!-- The following import statements include ModuleClasses from HGI -->
@@ -104,13 +104,13 @@
         </ModuleClass>
     </Modules>
 
-<!-- Definition of the Root Device starts here. -->
+<!-- Definition of the Device starts here. -->
 
-    <RootDevices>
+    <Devices>
 
-<!-- The Root Device contains several sub-devices and offers one action on its own. -->
+<!-- The Device contains several sub-devices and offers one action on its own. -->
 
-        <RootDevice id="MSEEB.root">
+        <Device id="MSEEB.root">
             <DeviceInfo>
                 <Name>Multi Socket Electrical-Extension-Block</Name>
                 <Vendor>HGI</Vendor>
@@ -122,7 +122,7 @@
                 This device is intended as a demonstration of how to define a Root Device with multiple sub-devices.
             </Doc>
 
-<!-- These are the modules for the root device:
+<!-- These are the modules for the device:
     - Switch on/off all contained switches. It inherits from hgi.dal.core.BooleanState.
     - A module with some data points for the firmware version of the whole device and a list of names of the containted power switches.
 -->
@@ -159,12 +159,12 @@
 
 <!-- Definition of sub-devices starts here. -->
 
-            <Devices>
+            <SubDevices>
 
 <!-- This is the first power switch of the extension block. For sake of simplicity no new ModuleClasses are defined, but only referenced.
 -->
 
-                <Device id="switch.power.1">
+                <SubDevice id="switch.power.1">
                     <DeviceInfo>
                         <Name>PowerSwitch 1</Name>
                         <Vendor>HGI</Vendor>
@@ -177,11 +177,11 @@
                             <extends domain="hgi.dal.core" class="BooleanState"/>
                         </Module>
                     </Modules>
-                </Device>
+                </SubDevice>
 
 <!-- This is the second power switch of the extension block. -->
 
-                <Device id="switch.power.2">
+                <SubDevice id="switch.power.2">
                     <DeviceInfo>
                         <Name>PowerSwitch 2</Name>
                         <Vendor>HGI</Vendor>
@@ -194,10 +194,10 @@
                             <extends domain="hgi.dal.core" class="BooleanState"/>
                         </Module>
                     </Modules>
-                </Device>
+                </SubDevice>
 
-            </Devices>
+            </SubDevices>
 
-        </RootDevice>
-    </RootDevices>
+        </Device>
+    </Devices>
 </Domain>

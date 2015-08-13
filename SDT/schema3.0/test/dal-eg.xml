@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
 <Domain xmlns:xi="http://www.w3.org/2001/XInclude"
-	xmlns="http://homegatewayinitiative.org/xml/dal/2.0" 
+	xmlns="http://homegatewayinitiative.org/xml/dal/3.0" 
 	id="com.telekom">
 
   <Imports>
@@ -11,9 +11,9 @@
   <Modules>
   </Modules>
 
-  <RootDevices>
+  <Devices>
 
-    <RootDevice id="switch.power">
+    <Device id="switch.power">
       <DeviceInfo>
 	<Name>PowerSwitch</Name>
 	<!-- The Vendor field should probably be part of the domain -->
@@ -71,6 +71,6 @@
 	  <extends domain="hgi.dal.core" class="BooleanState"/>
 	</Module>
       </Modules>
-    </RootDevice>
-  </RootDevices>
+    </Device>
+  </Devices>
 </Domain>

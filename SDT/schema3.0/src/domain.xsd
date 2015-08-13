@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema targetNamespace="http://homegatewayinitiative.org/xml/dal/2.0" 
-	   xmlns="http://homegatewayinitiative.org/xml/dal/2.0" 
+<xs:schema targetNamespace="http://homegatewayinitiative.org/xml/dal/3.0" 
+	   xmlns="http://homegatewayinitiative.org/xml/dal/3.0" 
 	   xmlns:xs="http://www.w3.org/2001/XMLSchema" 
 	  
  elementFormDefault="qualified">
@@ -28,31 +28,13 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element minOccurs="0" ref="RootDevices"/>
+        <xs:element minOccurs="0" ref="Devices"/>
       </xs:sequence>
       <xs:attribute ref="xml:base"/>
       <xs:attribute name="id" use="required" type="xs:ID"/>
     </xs:complexType>
   </xs:element>
   <xs:element name="ModuleClass" type="ModuleDef"/>
-  <xs:element name="RootDevices">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" maxOccurs="unbounded" ref="RootDevice"/>
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RootDevice">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element ref="DeviceInfo"/>
-        <xs:group ref="Doc"/>
-        <xs:element minOccurs="0" ref="Modules"/>
-        <xs:element minOccurs="0" ref="Devices"/>
-      </xs:sequence>
-      <xs:attribute name="id" use="required" type="xs:Name"/>
-    </xs:complexType>
-  </xs:element>
   <xs:element name="Devices">
     <xs:complexType>
       <xs:sequence>
@@ -60,7 +42,25 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="Device" type="DeviceDef"/>
+  <xs:element name="Device">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="DeviceInfo"/>
+        <xs:group ref="Doc"/>
+        <xs:element minOccurs="0" ref="Modules"/>
+        <xs:element minOccurs="0" ref="SubDevices"/>
+      </xs:sequence>
+      <xs:attribute name="id" use="required" type="xs:Name"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubDevices">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="SubDevice"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SubDevice" type="DeviceDef"/>
   <xs:complexType name="DeviceDef">
     <xs:sequence>
       <xs:element ref="DeviceInfo"/>

@@ -17,14 +17,14 @@ Domain =
     element Modules {
       element ModuleClass { ModuleDef }*
     }?,
-    element RootDevices {
-      element RootDevice {
+    element Devices {
+      element Device {
         attribute id { xsd:Name },
         DeviceInfo,
         Doc,
         Modules?,
-        element Devices {
-          element Device { DeviceDef }*
+        element SubDevices {
+          element SubDevice { DeviceDef }*
         }?
       }*
     }?
