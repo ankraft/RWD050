@@ -1,6 +1,6 @@
 # SDT Components
 
-In this document an overview about the SDT 2.0 definitions and component hierarchy is given.
+In this document an overview about the SDT 3.0 definitions and component hierarchy is given.
 
 ## Contents
 
@@ -18,7 +18,7 @@ In this document an overview about the SDT 2.0 definitions and component hierarc
 ## SDT Overview
 The followng UML diagram presents an overview about the SDT components.
 
-![](images/SDT2.0_UML.png)
+![](images/SDT3.0_UML.png)
 
 The syntax used in the diagram to model an XML Schema Definition (XSD) as an UML diagram follows the following approaches:
 
@@ -47,7 +47,7 @@ A *Domain* can define [Modules](#ModuleClass) or [RootDevices](#RootDevice) only
 #### Example
 
 	<Domain xmlns:xi="http://www.w3.org/2001/XInclude"
-    	xmlns="http://homegatewayinitiative.org/xml/dal/2.0" 
+    	xmlns="http://homegatewayinitiative.org/xml/dal/3.0" 
     	id="org.homegatewayinitiative">
     	<Imports>
       	  <xi:include href="./dal-core.xml" parse="xml" />

@@ -17,7 +17,7 @@ Even then the developer needs to manage different versions of the same SDT devic
 The version information must be available to applications at runtime.
 
 ### Proposal
-To solve this problem SDT components that can be influenced by firmware updates or configuration changes must be distinguishable by some kind of version scheme. Since different versions in the structure, attributes and elements of the SDT description as well as data types are already indicated by the "version number" of the SDT (e.g."http://hgi.org/xml/dal/2.0") only the components that are instantiated for the devices etc need to indicate their current version.
+To solve this problem SDT components that can be influenced by firmware updates or configuration changes must be distinguishable by some kind of version scheme. Since different versions in the structure, attributes and elements of the SDT description as well as data types are already indicated by the "version number" of the SDT (e.g."http://hgi.org/xml/dal/3.0") only the components that are instantiated for the devices etc need to indicate their current version.
 
 The proposal is to add a *version* attribute to the following SDT components:
 
