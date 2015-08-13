@@ -7,21 +7,24 @@ Note that this project runs under Apache 2.0 license. Read the [LICENSE](LICENSE
 Any contributions made to this project must comply with the forementioned license.
 
 ## Quick Links
-- ['domain.xsd' Version 2.0](SDT/schema2.0/src/domain.xsd)
-- [UML Diagram of the SDT 2.0](SDT/schema2.0/docs/images/SDT2.0_UML.png) ([source](SDT/schema2.0/docs/SDT_UML.uxf))
+- ['domain.xsd' Version 3.0](SDT/schema3.0/src/domain.xsd)
+- [UML Diagram of the SDT 3.0](SDT/schema3.0/docs/images/SDT3.0_UML.png) ([source](SDT/schema3.0/docs/SDT_UML.uxf))
 
 
 ## Content
 
 You can find further Information here:
 
-- [SDT Components](SDT/schema2.0/docs/SDT_Components.md)
-- [SDT Build System](SDT/schema2.0/docs/SDT%20Build%20System.md)
-- [Examples](SDT/schema2.0/docs/Examples.md) 
-- [FAQ](SDT/schema2.0/docs/FAQ.md)
-- [Links & References](SDT/schema2.0/docs/Links.md)
-- [Backlog & Issues](SDT/schema2.0/docs/Backlog.md)
+- [SDT Components](SDT/schema3.0/docs/SDT_Components.md)
+- [SDT Build System](SDT/schema3.0/docs/SDT%20Build%20System.md)
+- [Examples](SDT/schema3.0/docs/Examples.md) 
+- [FAQ](SDT/schema3.0/docs/FAQ.md)
+- [Links & References](SDT/schema3.0/docs/Links.md)
+- [Backlog & Issues](SDT/schema3.0/docs/Backlog.md)
 - [LICENSE](LICENSE)
+
+## Changes in 3.0
+- Renamed RootDevice to Device; renamed Device to SubDevice
 
 ## Changes in 2.0.1
 - Added missing "uri" data type.
